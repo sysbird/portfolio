@@ -332,22 +332,6 @@ body {
   padding-bottom: 3.4rem;
 }
 
-/* Adjust footer
---------------------------------------------- */
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
-.wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-flow: column nowrap;
-}
-
-#content {
-  flex-grow: 1;
-}
 
 /* Wrapper
 -------------------------------------------------------------- */
@@ -356,6 +340,7 @@ html, body {
   color: #222327;
   background-color: #FFF;
   overflow: hidden;
+  font-size: 0.96em;
 }
 
 /* Header
@@ -440,6 +425,10 @@ html, body {
   margin: 0;
   line-height: 1.4;
   padding: 0;
+}
+
+h2.entry-title {
+  font-family: 'Open Sans', 'Sawarabi Mincho', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', YuGothic, 'Yu Gothic', Meiryo, 'MS PGothic';
 }
 
 .entry-header .entry-title a {
@@ -981,17 +970,19 @@ ul.list li .entry-header .postdate {
     display: -webkit-flex;
     display: flex;
   }
+
   .two-columns .entry-eyecatch {
-    width: 50%;
+    width: 43%;
     margin-right: 3%;
   }
   .two-columns .entry-content {
     margin-top: 0;
-    width: 50%;
+    width: 67%;
   }
   .section:nth-child(even) .two-columns {
     flex-direction: row-reverse;
   }
+  
   .section:nth-child(even) .two-columns .entry-eyecatch {
     margin-left: 3%;
     margin-right: 0;
@@ -1041,6 +1032,11 @@ ul.list li .entry-header .postdate {
   body.fixed-header #header #branding #site-description {
     display: none;
   } */
+
+  .section.newpage {
+    page-break-before: always;
+  }
+
   ul.list li .entry-header .postdate {
     width: 14em;
     float: left;
@@ -1091,6 +1087,38 @@ ul.list li .entry-header .postdate {
     padding-bottom: 0.5em;
   }
   body.fixed-header #header #branding #site-description {
+    display: none;
+  }
+}
+
+@media print and (min-width: 930px) {
+  #header,
+  #footer {
+    background: #FFF;
+    color: #222327;
+  }
+
+  #header #branding #site-title {
+    color: #222327;
+  }
+
+  #header .container {
+    border-bottom: solid 1px #222327;
+  }
+
+  #footer .container {
+    border-top: solid 1px #222327;
+  }
+
+  .home .section .container {
+    border-bottom: solid 1px #222327;
+  }
+
+    .home .section:nth-child(2n) {
+    background: #FFF;
+  }
+ 
+  #footer #back-top {
     display: none;
   }
 }
