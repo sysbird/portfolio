@@ -411,6 +411,7 @@ body {
 
 .entry-eyecatch img {
   max-width: 100%;
+  vertical-align:bottom;
 }
 
 .entry-header {
@@ -928,6 +929,14 @@ ul.list li .entry-header .postdate {
   display: block;
 }
 
+.two-columns .entry-eyecatch {
+  margin-top: -1.7em;
+}
+
+.two-columns .entry-content {
+  padding-top: 1.7em;
+}
+
 /* Media queries for responsive design
 --------------------------------------------- */
 /* --- iPad Landscape --- */
@@ -974,9 +983,10 @@ ul.list li .entry-header .postdate {
   .two-columns .entry-eyecatch {
     width: 43%;
     margin-right: 3%;
+    margin-top: 0;
   }
   .two-columns .entry-content {
-    margin-top: 0;
+    padding-top: 0;
     width: 67%;
   }
   .section:nth-child(even) .two-columns {
@@ -1091,7 +1101,7 @@ ul.list li .entry-header .postdate {
   }
 }
 
-@media print and (min-width: 930px) {
+@media print {
   #header,
   #footer {
     background: #FFF;
@@ -1104,10 +1114,6 @@ ul.list li .entry-header .postdate {
 
   #header .container {
     border-bottom: solid 1px #222327;
-  }
-
-  #footer .container {
-    border-top: solid 1px #222327;
   }
 
   .home .section .container {
