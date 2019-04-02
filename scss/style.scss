@@ -556,23 +556,9 @@ img {
 		color: #FFF;
 	}
 
-	.site-title {
-		padding: #{$line-height /2}em 0;
-		line-height: 1.4;
-
-		&,
-		a {
-			color: #FFF;
-		}
-
-		strong {
-			font-weight: normal;
-		}
-	}
-
 	.copyright {
 		margin-bottom: 0;
-		padding: 1rem 0;
+		padding: 0.85rem 0;
 	}
 }
 

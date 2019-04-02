@@ -505,23 +505,9 @@ img {
   color: #FFF;
 }
 
-#footer .site-title {
-  padding: 0.85em 0;
-  line-height: 1.4;
-}
-
-#footer .site-title,
-#footer .site-title a {
-  color: #FFF;
-}
-
-#footer .site-title strong {
-  font-weight: normal;
-}
-
 #footer .copyright {
   margin-bottom: 0;
-  padding: 1rem 0;
+  padding: 0.85rem 0;
 }
 
 /* Section
