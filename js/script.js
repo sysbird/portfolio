@@ -40,23 +40,18 @@ jQuery(function() {
 		}	
 	});
 
-	// My mapp scroll enable
-	var map = jQuery('#gmap iframe');
-	map.css('pointer-events', 'none');
-	jQuery('#gmap').click(function() {
-		map.css('pointer-events', 'auto');
+	// Navigation for mobile
+	jQuery("#small-menu").click(function () {
+		jQuery("#menu-primary-items").slideToggle()
+		jQuery("#menu-wrapper").toggleClass("open");
 	});
-	map.mouseout(function() {
-		map.css('pointer-events', 'none');
-	})
+
 		
 	// Windows Scroll
-	var totop = jQuery( '#back-top' );
-	totop.hide();
+	var totop = jQuery('#back-top');
 	jQuery( window ).scroll(function () {
 		// back to pagetop
 		var scrollTop = parseInt( jQuery( this ).scrollTop() );
-		if ( scrollTop > 800 ) totop.fadeIn(); else totop.fadeOut();
 
 		// fixed header with scroll
 		if ( scrollTop > 200 ) {
@@ -76,8 +71,10 @@ jQuery(function() {
 	});
 
 	// back to pagetop
-	totop.click( function () {
-		jQuery( 'body, html' ).animate( { scrollTop: 0 }, 500 ); return false;
+	jQuery('#back-top').click( function () {
+		console.log("back-top");
+		jQuery( 'body, html' ).animate( { scrollTop: 0 }, 500 );
+		return false;
 	});
 });
 
