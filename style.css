@@ -54,10 +54,6 @@ q:before, q:after, blockquote:before, blockquote:after {
   content: none;
 }
 
-a img {
-  border: none;
-}
-
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -487,6 +483,7 @@ body {
 img {
   max-width: 100%;
   height: auto;
+  border: solid 1px #EEE;
 }
 
 /* Footer
@@ -589,16 +586,19 @@ img {
     display: -webkit-flex;
     display: flex;
   }
+ 
   .two-columns .entry-eyecatch {
     width: 43%;
     margin-right: 3%;
     padding-top: 1.7rem;
     padding-bottom: 1.7rem;
   }
+  
   .two-columns .entry-content {
     margin-top: 0;
     width: 67%;
   }
+ 
   .section:nth-child(even) .two-columns {
     flex-direction: row-reverse;
   }
