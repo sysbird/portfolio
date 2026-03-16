@@ -65,10 +65,6 @@ q:before, q:after, blockquote:before, blockquote:after {
   content: none;
 }
 
-a img {
-  border: none;
-}
-
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -289,7 +285,7 @@ ol {
 	line-height: 1.4;
 
 	li {
-		padding: #{$line-height /8}rem 0;
+		padding: .2rem 0;
 	}
 
 	ul,
@@ -364,7 +360,7 @@ body {
 .container {
 	width: 96%;
 	margin: 0 auto;
-	padding: 0;
+	padding: #{$line-height}rem;;
 	position: relative;
 	@include pie-clearfix;
 }
@@ -386,24 +382,34 @@ body {
 -------------------------------------------------------------- */
 #header {
 	width: 100%;
-	background: $accent-color;
 	position: relative;
 	z-index: 4;
+	background-color: $hover-background-color;
 
-	&,
-	a {
+	.message {
+		background: $accent-color;
 		color: #FFF;
-	}
+		text-align: center;
+		font-size: .86em;
+		line-height: 1.2;
+		padding: .5em 0;
 
+		a {
+			border: solid 1px;
+			border-radius: 4px;
+			padding: 1px 4px;
+			color: #FFF;
+		}
+	}
+	
 	#branding {
 		padding: 0.4em 0;
 
 		#site-title {
-			margin: 0 1em 0 0;
+			margin: 0 0 .5em 0;
 			padding: 0;
 			font-size: 2rem;
 			font-weight: normal;
-			color: #FFF;
 			line-height: 1;
 
 			a {
@@ -462,7 +468,6 @@ body {
 				height: 2px;
 				-webkit-transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
 				transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
-				background-color: #FFF;
 			}
 
 			&:before,
@@ -521,10 +526,8 @@ body {
 			span {
 				padding: #{$line-height /2}rem;
 				display: block;
-				color: #FFF;
 				text-decoration: none;
 				line-height: 1.2;
-				border-top: dotted 1px #FFF;
 			}
 
 			span {
@@ -539,6 +542,7 @@ body {
 img {
 	max-width: 100%;
 	height: auto;
+	border: solid 1px #EEE;
 }
 
 /* Footer
@@ -738,17 +742,27 @@ img {
 			position: fixed;
 			top: -60px;
 			width: 100%;
-			background-color: rgba( $accent-color, 0.80 );
 			transition-duration	: .7s;
 			transition-property: top;
+			opacity: .7;
 
 			&.show {
 				top: 0;
 			}
 
+			.container {
+				padding: .5em 0;
+			}
+
 			#branding {
 				padding-top: 0.5em;
 				padding-bottom: 0.5em;
+				
+				#site-title {
+					margin-bottom: 0;
+				}
+
+
 				#site-description {
 					display: none;
 				}
