@@ -549,6 +549,7 @@ img {
 --------------------------------------------- */
 #footer {
 	clear: both;
+	text-align: center;
 	width: 100%;
 	margin: 0 auto;
 	background-color: $accent-color;
@@ -666,7 +667,7 @@ img {
 }
 
 /* --- PCs --- */
-@media print, screen and (min-width: 930px) {
+@media print, screen and (min-width: 1000px) {
 
 	body,
 	.wrapper {
@@ -676,7 +677,7 @@ img {
 	}
 
 	.container {
-		width: 930px;
+		width: 1000px;
 	}
 
 	#header {
@@ -693,12 +694,12 @@ img {
 	}
 
 	#wall {
-		width: 930px;
+		width: 1000px;
 		margin: 0 auto 40px;
 	}
 }
 
-@media screen and (min-width: 930px) {
+@media screen and (min-width: 1000px) {
 	#menu-wrapper {
 		margin: 0;
 		@include pie-clearfix;

@@ -456,6 +456,7 @@ img {
 --------------------------------------------- */
 #footer {
   clear: both;
+  text-align: center;
   width: 100%;
   margin: 0 auto;
   background-color: #160c51;
@@ -560,7 +561,7 @@ img {
   }
 }
 /* --- PCs --- */
-@media print, screen and (min-width: 930px) {
+@media print, screen and (min-width: 1000px) {
   body,
   .wrapper {
     display: -webkit-flex;
@@ -569,7 +570,7 @@ img {
     min-height: 100vh;
   }
   .container {
-    width: 930px;
+    width: 1000px;
   }
   #header #branding {
     padding-top: 1em;
@@ -579,11 +580,11 @@ img {
     display: inline;
   }
   #wall {
-    width: 930px;
+    width: 1000px;
     margin: 0 auto 40px;
   }
 }
-@media screen and (min-width: 930px) {
+@media screen and (min-width: 1000px) {
   #menu-wrapper {
     margin: 0;
     *zoom: 1;
